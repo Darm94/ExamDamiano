@@ -6,9 +6,11 @@ public class GameOverManager : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") && canvasToEnable != null)
+        
+        if (canvasToEnable != null)
         {
-            canvasToEnable.enabled = true;
+            Debug.Log("TRIGGHEEEER");
+            canvasToEnable.gameObject.SetActive(true);
         }
     }
 }
